@@ -101,7 +101,7 @@ a:hover{
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 600px;
+    height: 280px;
     
     background: url(../images/hero-banner-carte.png);
     background-position:center;
@@ -112,6 +112,36 @@ a:hover{
     padding: 1em;
     border-radius: 0.3em;
    }
+}
+#header-galerie{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 240px;
+    
+    background-color: var(--sable);
+    p{
+        color: var(--cafe);
+        text-align: center;
+        width: 1000px;
+    }
+}
+#header-contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 240px;
+    
+    background-color: var(--sable);
+    p{
+        color: var(--cafe);
+        text-align: center;
+        width: 1000px;
+    }
 }
 
 #section-histoire{
@@ -170,12 +200,101 @@ a:hover{
     background-color: var(--sable);
 
 }
+#section-galerie{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--creme);
+    img{
+        width: 380px;
+        height: 280px;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+    #galerie-all{
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+    #galerie-haut{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+    #galerie-bas{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+}
+
+#section-contact{
+    width: 100%;
+    min-height: 580px;
+    background-color: var(--creme);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#div-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 640px;
+    min-height: fit-content;
+    padding: 1em;
+    background-color: white;
+    gap: 20px;
+    a{
+        color: white;
+        text-decoration: none;
+        background-color: var(--terracotta);
+        padding: 1em;
+        padding-left: 5em;
+        padding-right: 5em;
+        border-radius: 10px;
+    }
+    input{
+        width: 640px;
+        height: 160px;
+        background-color: var(--sable);
+        border: 2px solid black;
+        text-align: center;
+    }
+}
+#div-contact{
+    width: 520px;
+    min-height: fit-content;
+    background-color: var(--sable);
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    p{
+        color: var(--cafe);
+    }
+   
+    ul{
+        list-style: none;
+         li{
+        color: var(--cafe);
+        font-weight: 500;
+        
+    }
+    }
+}
+
 #footer{
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 240px;
+    min-height: 240px;
     background-color: var(--cafe);
 
     
@@ -236,11 +355,18 @@ a:hover{
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    min-height: fit-content;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: var(--creme);
 
     #menu-carte-tout{
         display: flex;
+        justify-content: center;
         gap: 20px;
+        flex-wrap: wrap;
+    
+        
     }
     .menu-carte-binome{
         display: flex;
@@ -251,10 +377,14 @@ a:hover{
         display: flex;
         align-items: center;
         justify-content: center;
+        
+        
         img{
-            width: 300px;
-            height: 200px;
+           display: block;
             object-fit: cover;
+            width: 50%;
+            height: 100%;
+           
 
 
         }
@@ -265,16 +395,56 @@ a:hover{
             gap: 20px;
             background-color: rgb(200, 200, 200);
             border-radius: 20px;
-            width: 40vw;
+            width: 500px;
+            height: 200px;
+             overflow: hidden;
+            
+            
         
 
         }
         .texte-carte{
             display: flex;
+            justify-content: center;
+            align-items: center;
             flex-direction: column;
-            padding: 1em;
+            padding: 1em
             
 
         }
+    }
+}
+
+
+@media (max-width : 767px)  {
+    #navbar{
+        ul{
+            display: none;
+        }
+    }
+    #menu-carte-entree{
+        article {
+            .menu-tout{
+                flex-direction: column;
+                width: 90vw;
+                height: 50vh;
+
+               img{
+                width: 100%;
+               }
+                h3{
+                    font-size: small;
+                }
+                p{
+                    font-size: small;
+                    text-align: center;
+                }
+            }
+        }
+
+        
+    }
+    #footer{
+        flex-direction: column;
     }
 }
